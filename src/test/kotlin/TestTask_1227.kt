@@ -1,5 +1,4 @@
 
-import org.example.mainTask1227
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import java.io.ByteArrayInputStream
@@ -9,7 +8,7 @@ import java.io.PrintStream
 /**
  * Tests for Task 1227
  */
-class TestTask_1227 {
+class TestTask1227 {
 
     @Test
     fun test01_Divisor100() {

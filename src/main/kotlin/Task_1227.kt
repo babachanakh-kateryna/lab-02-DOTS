@@ -1,12 +1,23 @@
-package org.example
+import kotlin.math.sqrt
 
 fun mainTask1227() {
-    val n = readLine()?.toIntOrNull() ?: return
+    val input = readlnOrNull()?.toIntOrNull() ?: return
 
-    for (d in (n / 2) downTo 1) {
-        if (n % d == 0) {
-            println(d)
+    var i = 2
+    var dmax: Int? = null
+    val d = sqrt(input.toDouble()).toInt() + 2
+
+    while (i < d) {
+        if (input % i == 0) {
+            dmax = input / i
             break
         }
+        i += 1
+    }
+
+    if (dmax != null) {
+        println(dmax)
+    } else {
+        println(1)
     }
 }
