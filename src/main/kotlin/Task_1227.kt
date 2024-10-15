@@ -1,19 +1,19 @@
 package org.example
 
-import kotlin.math.sqrt
-
 fun main() {
-    val n = readLine()?.toIntOrNull() ?: return
-    val sqrtN = sqrt(n.toDouble()).toInt()
+    val n = readLine()?.toLongOrNull() ?: return
+    if (n <= 1) {
+        println(n)
+        return
+    }
 
-    for (d in sqrtN downTo 1) {
-        if (n % d == 0) {
-            if (d != n) {
-                println(n / d)
-            } else {
-                println(d)
-            }
-            return
+    var largestDivisor = 1L
+
+    for (i in n / 2 downTo 1) {
+        if ((n % i).toInt() == 0) {
+            largestDivisor = i
+            break
         }
     }
+    println(largestDivisor)
 }
