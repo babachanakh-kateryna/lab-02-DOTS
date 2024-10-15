@@ -1,19 +1,12 @@
 package org.example
 
-fun main() {
-    val n = readLine()?.toLongOrNull() ?: return
-    if (n <= 1) {
-        println(n)
-        return
-    }
+fun mainTask1227() {
+    val n = readLine()?.toIntOrNull() ?: return
 
-    var largestDivisor = 1L
-
-    for (i in n / 2 downTo 1) {
-        if ((n % i).toInt() == 0) {
-            largestDivisor = i
+    for (d in (n / 2) downTo 1) {
+        if (n % d == 0) {
+            println(d)
             break
         }
     }
-    println(largestDivisor)
 }
