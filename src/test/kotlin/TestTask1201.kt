@@ -1,13 +1,11 @@
-import org.example.mainTask1201
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import java.io.ByteArrayOutputStream
-import java.io.PrintStream
+import java.io.*
 
 /**
  * Tests for Task 1201.
  */
-class TestTask_1201 {
+class TestTask1201 {
 
     @Test
     fun testTask() {

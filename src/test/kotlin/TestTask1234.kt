@@ -6,9 +6,9 @@ import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 
 /**
- * Tests for Task 1227
+ * Tests for Task 1234
  */
-class TestTask1227 {
+class TestTask1234{
 
     private fun runTest(input: String, expectedOutput: String) {
         // Prepare input data
@@ -18,52 +18,58 @@ class TestTask1227 {
         val outputStream = ByteArrayOutputStream()
         System.setOut(PrintStream(outputStream))
 
-        // Run the main function for Task 1227
-        mainTask1227()
+        // Run the main function for Task 1234
+        mainTask1234()
 
         // Check the result
         assertEquals(expectedOutput, outputStream.toString().trim())
     }
 
     @Test
-    fun test01_Divisor100() {
-        // Input data
-        val input = "100"
+    fun test1_OK() {
+        // input data
+        val input = """
+            4
+            3
+            -5
+            3
+            0
+        """.trimIndent()
 
-        // Expected output
-        val expectedOutput = "50"
-
-        runTest(input, expectedOutput)
-    }
-
-    @Test
-    fun test02_Divisor49() {
-        // Input data
-        val input = "49"
-
-        // Expected output
-        val expectedOutput = "7"
+        // expected output
+        val expectedOutput = "3"
 
         runTest(input, expectedOutput)
     }
 
     @Test
-    fun test03_Divisor37() {
-        //  Input data
-        val input = "37"
-
-        // Expected output
+    fun test02_OK() {
+        // input data
+        val input = """
+            1
+            0
+            2
+            3
+            4
+            5
+        """.trimIndent()
+        // expected output
         val expectedOutput = "1"
 
         runTest(input, expectedOutput)
     }
 
     @Test
-    fun test04_DivisorForLargeNumber() {
-        //  Input data
-        val input = "2147483647"
-        // Expected output
-        val expectedOutput = "1"
+    fun test03_NoOddNumbers() {
+        // input data
+        val input = """
+            2
+            4
+            6
+            0
+        """.trimIndent()
+        // expected output
+        val expectedOutput = "0"
 
         runTest(input, expectedOutput)
     }

@@ -1,5 +1,7 @@
 import kotlin.math.sqrt
-
+/**
+ * Task with ID 1227
+ */
 fun mainTask1227() {
     val input = readlnOrNull()?.toIntOrNull() ?: return
 
