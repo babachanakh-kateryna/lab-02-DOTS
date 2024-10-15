@@ -1,9 +1,9 @@
 package org.example
 
-fun main() {
+fun mainTask1217() {
     val n = readLine()?.toIntOrNull() ?: return
 
-    for (i in 1..n) {
+    for (i in n downTo 1) {
         println("0 ".repeat(i).trim())
     }
 }

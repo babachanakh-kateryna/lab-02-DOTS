@@ -1,4 +1,4 @@
-import org.example.main
+import org.example.mainTask1201
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import java.io.ByteArrayOutputStream
@@ -19,7 +19,7 @@ class TestTask_1201 {
         System.setIn(input.byteInputStream())
 
         // Run the main function
-        main()
+        mainTask1201()
 
         // expected output
         val expectedOutput = "Hello!\nHello!\nHello!\nHello!\n"
