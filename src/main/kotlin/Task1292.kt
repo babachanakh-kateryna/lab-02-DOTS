@@ -1,19 +1,20 @@
-fun zemleryiki(N: Int): Pair<Int, Int> {
+fun main() {
+    val n = readLine()?.toIntOrNull() ?: return
+
     var minTime = 0
-    var zemleriiki = N
-    while (zemleriiki > 1) {
-        zemleriiki = (zemleriiki + 1) / 2
+    var maxTime = 0
+    var remaining = n
+
+    while (remaining > 1) {
         minTime++
+        remaining /= 2
     }
 
-    val maxTime = N - 1
+    remaining = n
+    while (remaining > 0) {
+        maxTime++
+        remaining -= maxTime
+    }
 
-    return Pair(minTime, maxTime)
-}
-
-fun main() {
-    val N = readLine()!!.toInt()
-
-    val (minTime, maxTime) = zemleryiki(N)
     println("$minTime $maxTime")
 }
