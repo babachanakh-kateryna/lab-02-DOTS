@@ -1,20 +1,19 @@
-import kotlin.math.ceil
-import kotlin.math.log2
-
-/**
- * Task with ID 1292
- */
-fun main() {
-    val n = readLine()?.toIntOrNull() ?: return
-
-    val maxTime = ceil(log2(n.toDouble())).toInt()
-
+fun zemleryiki(N: Int): Pair<Int, Int> {
     var minTime = 0
-    var remaining = n
-    while (remaining > 1) {
-        remaining /= 2
+    var zemleriiki = N
+    while (zemleriiki > 1) {
+        zemleriiki = (zemleriiki + 1) / 2
         minTime++
     }
 
+    val maxTime = N - 1
+
+    return Pair(minTime, maxTime)
+}
+
+fun main() {
+    val N = readLine()!!.toInt()
+
+    val (minTime, maxTime) = zemleryiki(N)
     println("$minTime $maxTime")
 }
