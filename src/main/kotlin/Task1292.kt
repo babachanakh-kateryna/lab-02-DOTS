@@ -1,20 +1,18 @@
-fun main() {
-    val n = readLine()?.toIntOrNull() ?: return
+import kotlin.math.floor
+import kotlin.math.log2
 
-    var minTime = 0
-    var maxTime = 0
-    var remaining = n
+/*
+Task with ID 1292
+ */
+fun mainTask1292() {
+    val n = readLine()!!.toInt()
+    println("${minTime(n)} ${maxTime(n)}")
+}
 
-    while (remaining > 1) {
-        minTime++
-        remaining /= 2
-    }
+fun maxTime(n: Int): Int {
+    return (n + 1) / 2
+}
 
-    remaining = n
-    while (remaining > 0) {
-        maxTime++
-        remaining -= maxTime
-    }
-
-    println("$minTime $maxTime")
+fun minTime(n: Int): Int {
+    return floor(log2(n.toDouble() + 1)).toInt()
 }
